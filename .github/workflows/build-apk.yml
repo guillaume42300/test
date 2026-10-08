@@ -1,0 +1,41 @@
+name: Construire APK Observateur Basket
+
+Sur :
+workflow_dispatch :
+Push :
+Branches :
+- Principal
+
+Emplois :
+Build :
+Fonctionne-CONTINU : Ubuntu-Latest
+
+Étapes :
+- name: Récupérer le projet
+Utilisations : actions/checkout@v6
+
+- nom : Installer Java 17
+Utilisations : actions/configuration java@v5
+avec :
+Distribution : Temurin
+Version Java : '17'
+
+- nom : SDK Android de l'installateur
+Utilisations : Android-actions/setup-android@v4
+avec :
+Packages : « Plateformes ; Outils de construction Android-35 ; Outils de plateforme 35.0.0 »
+
+- nom : Installer Gradle
+Utilisations : Gradle/Actions/Setup-gradle@v6
+avec :
+Version Gradle : « 8.7 »
+
+- nom : Compiler l'application
+working-directory : ObservateurBasket-Android-V1-native
+run : gradle assembleDebug
+
+- name: Récupérer l'APK
+Utilisations : actions/téléchargement artifact@v4
+avec :
+name: Observateur-Basket-APK
+path : ObservateurBasket-Android-V1-native/app/build/outputs/apk/debug/app-debug.apk
