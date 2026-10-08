@@ -1,8 +1,3 @@
-(Aucun objet)
-guillaume thivend
-vous
-name: Construire APK Observateur Basket
-
 on:
   workflow_dispatch:
   push:
