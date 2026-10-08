@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:padding="16dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <TextView android:text="OBSERVATEUR BASKET" android:textSize="24sp"
+            android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:text="Observation numérique des arbitres" android:textSize="14sp"
+            android:layout_marginBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="1. Match" android:textStyle="bold" android:textSize="18sp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/teamA" android:hint="Équipe A" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/teamB" android:hint="Équipe B" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/ref1" android:hint="Arbitre 1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/ref2" android:hint="Arbitre 2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="2. Période" android:textStyle="bold" android:textSize="18sp"
+            android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Spinner android:id="@+id/period" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="3. Nouvelle situation" android:textStyle="bold" android:textSize="18sp"
+            android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Spinner android:id="@+id/type" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/note" android:hint="Décris la situation…" android:minLines="4"
+            android:gravity="top" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/dictate" android:text="🎙️ Dicter" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/saveSituation" android:text="ENREGISTRER LA SITUATION" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="4. Terrain" android:textStyle="bold" android:textSize="18sp"
+            android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:text="Touchez le terrain pour placer un arbitre. Les marqueurs peuvent être déplacés." android:textSize="12sp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.observateurbasket.CourtView android:id="@+id/court" android:layout_width="match_parent" android:layout_height="280dp"/>
+        <Button android:id="@+id/addA" android:text="Ajouter A1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/addB" android:text="Ajouter B1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/addR" android:text="Ajouter R1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/clearCourt" android:text="Effacer le terrain" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="5. Bilan de période" android:textStyle="bold" android:textSize="18sp"
+            android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Spinner android:id="@+id/bilanPeriod" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/general" android:hint="Analyse générale de la période" android:minLines="3" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/pos1" android:hint="Arbitre 1 — 2 à 3 points positifs, un par ligne" android:minLines="3" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/work1" android:hint="Arbitre 1 — 2 à 3 pistes de travail, une par ligne" android:minLines="3" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/pos2" android:hint="Arbitre 2 — 2 à 3 points positifs, un par ligne" android:minLines="3" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/work2" android:hint="Arbitre 2 — 2 à 3 pistes de travail, une par ligne" android:minLines="3" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/dictateGeneral" android:text="🎙️ Dicter l'analyse générale" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/saveBilan" android:text="ENREGISTRER LE BILAN" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/report" android:text="📋 GÉNÉRER LE RAPPORT FINAL" android:textStyle="bold"
+            android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/output" android:textSize="14sp" android:paddingTop="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
