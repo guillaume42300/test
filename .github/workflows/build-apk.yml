@@ -37,4 +37,3 @@ jobs:
         with:
           name: Observateur-Basket-APK
           path: ObservateurBasket-Android-V1-native/app/build/outputs/apk/debug/app-debug.apk
-OuiNon
